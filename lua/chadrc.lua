@@ -26,7 +26,6 @@ M.ui = {
 
   cmp = {
     style = "default",
-    icons = true,
   },
 }
 
