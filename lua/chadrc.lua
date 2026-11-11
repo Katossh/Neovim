@@ -20,10 +20,6 @@ M.ui = {
     enabled = false,
   },
 
-  nvdash = {
-    load_on_startup = false,
-  },
-
   telescope = {
     style = "bordered",
   },
@@ -32,17 +28,20 @@ M.ui = {
     style = "default",
     icons = true,
   },
+}
 
-  lsp = {
-    signature = true,
-    semantic_tokens = false,
-  },
+M.nvdash = {
+  load_on_startup = false,
+}
 
-  term = {
-    sizes = { sp = 0.30, vsp = 0.25 },
-    float = {
-      border = "rounded",
-    },
+M.lsp = {
+  signature = true,
+}
+
+M.term = {
+  sizes = { sp = 0.30, vsp = 0.25 },
+  float = {
+    border = "rounded",
   },
 }
 
