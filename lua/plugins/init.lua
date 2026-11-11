@@ -4,11 +4,21 @@ return {
   { "mason-org/mason.nvim", enabled = false },
 
   {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("configs.lspconfig")
+    end,
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     branch = "master",
     build = ":TSUpdate",
     opts = function(_, opts)
-      opts.ensure_installed = { "bash", "c", "cpp", "diff", "json", "lua", "luadoc", "markdown", "markdown_inline", "nix", "query", "rust", "toml", "vim", "vimdoc", "yaml" }
+      opts.ensure_installed = {
+        "bash", "c", "cpp", "diff", "json", "lua", "luadoc", "markdown",
+        "markdown_inline", "nix", "query", "rust", "toml", "vim", "vimdoc", "yaml",
+      }
       opts.highlight = vim.tbl_deep_extend("force", opts.highlight or {}, { enable = true })
       opts.auto_install = false
       return opts
